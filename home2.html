@@ -22,7 +22,7 @@
     <title>Airbnb</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-white">
       <a class="navbar-brand" href="#"><span>Airbnb</span></a>
       <button
         class="navbar-toggler d-lg-none"
@@ -46,18 +46,28 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Become a host</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">$USD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">English</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container-fluid nav-btns mt-1">
+    <div class="container-fluid nav-btns">
       <a href="#" class="btn">Dates</a>
       <a href="#" class="btn">Guests</a>
       <a href="#" class="btn">Work trip</a>
@@ -104,7 +114,7 @@
               <div class="card-body">
                   <div class="row">
                       <div class="col-8">
-                            <span class="badge badge-danger">Danger</span>
+                            <span class="badge badge-danger">Plus</span>
                             <span class="location">ostunia</span>
                       </div>
                       <div class="col-4">
@@ -148,7 +158,7 @@
                   <div class="card-body">
                       <div class="row">
                           <div class="col-8">
-                                <span class="badge badge-danger">Danger</span>
+                                <span class="badge badge-danger">Plus</span>
                                 <span class="location">ostunia</span>
                           </div>
                           <div class="col-4">
@@ -192,7 +202,7 @@
                   <div class="card-body">
                       <div class="row">
                           <div class="col-8">
-                                <span class="badge badge-danger">Danger</span>
+                                <span class="badge badge-danger">Plus</span>
                                 <span class="location">ostunia</span>
                           </div>
                           <div class="col-4">
@@ -238,7 +248,7 @@
                   <div class="card-body">
                       <div class="row">
                           <div class="col-8">
-                                <span class="badge badge-danger">Danger</span>
+                                <span class="badge badge-danger">Plus</span>
                                 <span class="location">ostunia</span>
                           </div>
                           <div class="col-4">
@@ -255,52 +265,6 @@
       </div>
     </section>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(".filter-toggle").click(function() {
-        var target = $(this)
-          .attr("id")
-          .split("-")[1];
-        if (!$(".filter-" + target).hasClass("active")) {
-          $(".filter-pop").hide();
-          $(".filter-toggle").removeClass("in");
-          $(this).toggleClass("in");
-          $(".filter-" + target).fadeToggle("fast");
-          $(".filter-pop").removeClass("active");
-          $(".filter-" + target).toggleClass("active");
-          $(".filter-cover").show();
-        } else {
-          $(".filter-toggle").removeClass("in");
-          $(".filter-cover").hide();
-          $(".filter-pop").hide();
-          $(".filter-pop").removeClass("active");
-        }
-      });
-      $(window).click(function() {
-        $(".filter-toggle").removeClass("in");
-        $(".filter-cover").hide();
-        $(".filter-pop").hide();
-        $(".filter-pop").removeClass("active");
-      });
-
-      $(".filter-toggle").click(function(event) {
-        event.stopPropagation();
-      });
-      $(".filter-pop").click(function(event) {
-        event.stopPropagation();
-      });
-    </script>
+   
   </body>
 </html>
