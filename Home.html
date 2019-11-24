@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css\fontawesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Airbnb</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+                <a class="navbar-brand" href="#">
+                    <span>Airbnb</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <form class="form-inline my-2 my-lg-0">
+                        <!-- Actual search box -->
+                        <div class="form-group has-search">
+                            <i class="fa fa-search form-control-feedback"></i>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form>
+        
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">$USD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Become a host</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Login</a>
+                            </li>
+                        </ul>
+ 
+                           
+                    </div>
+
+                    <div class="filter-btns">
+                            <ul>
+                                <!-- Guests Filter -->
+                                <li class="">
+                                    <a class="filter-toggle" id="toggle-guests">Dates</a>
+                                </li>
+                                <!-- Dates Filter-->
+                                <li class="rooms-filter">
+                                    <a class="filter-toggle" id="toggle-filter">Guests</a>
+                                </li>
+                                <!-- Work Filter -->
+                                <li class="">
+                                    <a class="filter-toggle" id="toggle-guests">Work trip</a>
+                                </li>
+                                <!-- Type Filter-->
+                                <li class="rooms-filter">
+                                    <a class="filter-toggle" id="toggle-filter">Type of place</a>
+                                </li>
+                                <!-- Price Filter -->
+                                <li class="">
+                                    <a class="filter-toggle" id="toggle-guests">Price</a>
+                                </li>
+                                <!-- Dates Filter-->
+                                <li class="rooms-filter">
+                                    <a class="filter-toggle" id="toggle-filter">Instant book</a>
+                                </li>
+                                <!-- More Filter -->
+                                <li class="">
+                                    <a class="filter-toggle" id="toggle-guests">More filters</a>
+                                </li>
+                            </ul>
+                        </div>
+    </nav>
+        
+        <nav class="sec-nav">
+            <div class="filter-btns">
+                <ul>
+                    <!-- Guests Filter -->
+                    <li class="">
+                        <a class="filter-toggle" id="toggle-guests">Dates</a>
+                    </li>
+                    <!-- Dates Filter-->
+                    <li class="rooms-filter">
+                        <a class="filter-toggle" id="toggle-filter">Guests</a>
+                    </li>
+                    <!-- Work Filter -->
+                    <li class="">
+                        <a class="filter-toggle" id="toggle-guests">Work trip</a>
+                    </li>
+                    <!-- Type Filter-->
+                    <li class="rooms-filter">
+                        <a class="filter-toggle" id="toggle-filter">Type of place</a>
+                    </li>
+                    <!-- Price Filter -->
+                    <li class="">
+                        <a class="filter-toggle" id="toggle-guests">Price</a>
+                    </li>
+                    <!-- Dates Filter-->
+                    <li class="rooms-filter">
+                        <a class="filter-toggle" id="toggle-filter">Instant book</a>
+                    </li>
+                    <!-- More Filter -->
+                    <li class="">
+                        <a class="filter-toggle" id="toggle-guests">More filters</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                        <h6 class="col-md-12 location-title">
+                           Over 1,000,000 guest reviews for places to stay in New York, with an average of 4.7 out of 5 stars.
+                        </h6>
+                </div>
+                    
+                <div class="col-md-12 row">
+                        <div class="col-md-3">
+                            room1
+                        </div>
+                        <div class="col-md-3">
+                            room2
+                        </div>
+                        <div class="col-md-3">
+                            room1
+                        </div>
+                        <div class="col-md-3">
+                            room4
+                        </div>
+                </div>
+
+            
+            </div>
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('.filter-toggle').click(function() {
+    var target =  $(this).attr('id').split("-")[1];
+    if (!$('.filter-'+target).hasClass('active')) {
+       $('.filter-pop').hide();
+       $('.filter-toggle').removeClass('in');
+       $(this).toggleClass('in');
+       $('.filter-'+target).fadeToggle('fast');
+       $('.filter-pop').removeClass('active');
+       $('.filter-'+target).toggleClass('active');
+       $('.filter-cover').show();
+    }
+    else {
+       $('.filter-toggle').removeClass('in');
+       $('.filter-cover').hide();
+       $('.filter-pop').hide();
+       $('.filter-pop').removeClass('active');
+   }
+
+ })
+ $(window).click(function() {
+   $('.filter-toggle').removeClass('in');
+   $('.filter-cover').hide();
+   $('.filter-pop').hide();
+   $('.filter-pop').removeClass('active');
+});
+
+$('.filter-toggle').click(function(event){
+   event.stopPropagation();
+});
+$('.filter-pop').click(function(event){
+   event.stopPropagation();
+});
+
+    </script>
+  </body>
+</html>
