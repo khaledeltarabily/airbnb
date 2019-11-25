@@ -180,3 +180,9 @@ body{
 .card-star-text{
   text-align: end;
 }
+
+.nav-btns .btn:focus {
+  outline: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 0 0;
+}
