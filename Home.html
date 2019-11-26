@@ -7,8 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css\fontawesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Airbnb</title>
   </head>
@@ -138,12 +138,30 @@
                         <div class="col-md-3">
                             room1
                         </div>
-                        <div class="col-md-3">
-                            room4
-                        </div>
-                </div>
+                        <div class="col-md-12">
+                            <!-- Slider 1 -->
+                            <div class="slider" id="slider1">
+                                    <!-- Slides -->
+                                    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)"></div>
+                                    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)"></div>
+                                    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/Gif-pont-lueur-600.gif)"></div>
+                                    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_110627-8240-Myst.jpg)"></div>
+                                    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_Sharpened-version.jpg)"></div>
+                                    <!-- The Arrows -->
+                                    <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
+                                    <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
+                                    <!-- Title Bar -->
+                                    <span class="titleBar">
+                                        <h1>This Slider has all default settings.</h1>
+                                    </span>
+                            </div>
+                                
+ 
+    
 
-            
+                </div>
+                
+
             </div>
         </div>
 
@@ -152,40 +170,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        $('.filter-toggle').click(function() {
-    var target =  $(this).attr('id').split("-")[1];
-    if (!$('.filter-'+target).hasClass('active')) {
-       $('.filter-pop').hide();
-       $('.filter-toggle').removeClass('in');
-       $(this).toggleClass('in');
-       $('.filter-'+target).fadeToggle('fast');
-       $('.filter-pop').removeClass('active');
-       $('.filter-'+target).toggleClass('active');
-       $('.filter-cover').show();
-    }
-    else {
-       $('.filter-toggle').removeClass('in');
-       $('.filter-cover').hide();
-       $('.filter-pop').hide();
-       $('.filter-pop').removeClass('active');
-   }
-
- })
- $(window).click(function() {
-   $('.filter-toggle').removeClass('in');
-   $('.filter-cover').hide();
-   $('.filter-pop').hide();
-   $('.filter-pop').removeClass('active');
-});
-
-$('.filter-toggle').click(function(event){
-   event.stopPropagation();
-});
-$('.filter-pop').click(function(event){
-   event.stopPropagation();
-});
-
-    </script>
+    <script src="js/mainjs.js"></script>
   </body>
 </html>
