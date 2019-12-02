@@ -584,6 +584,9 @@ body{
 }
 
 
+.slider > .show {
+  z-index: 1;
+}
 
 
 
