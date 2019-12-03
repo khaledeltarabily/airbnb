@@ -106,15 +106,16 @@ function addIndicator() {
         e.target.setAttribute("class","active");
     
       //image slider remove old img 
-      for (var i = 0; i < sliderCards.getElementsByTagName("div").length; i++) {
-        if (sliderCards.getElementsByTagName("div")[i].className === "show") {
-          sliderCards.getElementsByTagName("div")[i].classList.remove("show");
+      var sliderCardImage=sliderCards.getElementsByTagName("div");
+      for (var i = 0; i < sliderCardImage.length; i++) {
+        if (sliderCardImage[i].className === "show") {
+          sliderCardImage[i].classList.remove("show");
           break;
         }
       }
     
       //set new image
-      sliderCards.getElementsByTagName("div")[e.target.getAttribute('data-slide-to')].setAttribute("class","show");
+      sliderCardImage[e.target.getAttribute('data-slide-to')].setAttribute("class","show");
     
     };
 
@@ -150,23 +151,24 @@ function nextSlide(sliderCard,size) {
 }
 
 //this changes the image and button selection
-function changeCarousel(pos,domElements,sliderCard) {
-  console.log(sliderCard.getElementsByClassName("active")[0]);
-  sliderCard.getElementsByClassName("active")[0].classList.remove("active");
+function changeCarousel(pos,domElements,sliderCards) {
+  console.log(sliderCards.getElementsByClassName("active")[0]);
+  sliderCards.getElementsByClassName("active")[0].classList.remove("active");
   
   //dots
   domElements[pos].setAttribute("class","active");
  
   //image slider remove old img 
-  for (var i = 0; i < sliderCard.getElementsByTagName("div").length; i++) {
-    if (sliderCard.getElementsByTagName("div")[i].className === "show") {
-      sliderCard.getElementsByTagName("div")[i].classList.remove("show");
+  var sliderCardImage=sliderCards.getElementsByTagName("div");
+  for (var i = 0; i < sliderCardImage.length; i++) {
+    if (sliderCardImage[i].className === "show") {
+      sliderCardImage[i].classList.remove("show");
       break;
     }
   }
 
   //set new image
-  sliderCard.getElementsByTagName("div")[pos].setAttribute("class","show");
+  sliderCardImage[pos].setAttribute("class","show");
 }
 
 
