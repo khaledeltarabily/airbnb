@@ -522,17 +522,6 @@ body{
 
 
 
-.carousel-indicators li .showli {
-  background-color: #7EC03D;
-  -moz-animation: boing .5s forwards;
-  -o-animation: boing .5s forwards;
-  -webkit-animation: boing .5s forwards;
-  animation: boing .5s forwards;
-}
-
-
-
-
 .carousel-indicators li {
   width: 8px;
   height: 8px;
