@@ -45,13 +45,13 @@
     </nav>
 
     <div class="container-fluid nav-btns">
-      <a href="#" class="btn">Dates</a>
-      <a href="#" class="btn">Guests</a>
-      <a href="#" class="btn">Work trip</a>
-      <a href="#" class="btn">Type of place</a>
-      <a href="#" class="btn">Price</a>
-      <a href="#" class="btn">Instant book</a>
-      <a href="#" class="btn">More filters</a>
+      <a href="#" class="btn effect01"><span>Dates</span></a>  
+      <a href="#" class="btn effect01"><span>Guests</span></a>
+      <a href="#" class="btn effect01"><span>Work trip</span></a>
+      <a href="#" class="btn effect01"><span>Type of place</span></a>
+      <a href="#" class="btn effect01"><span>Price</span></a>
+      <a href="#" class="btn effect01"><span>Instant book</span></a>
+      <a href="#" class="btn effect01"><span>More filters</span></a>
     </div>
 
     <section class="top-rated">
@@ -217,9 +217,92 @@
       </div>
     </section>
 
+   <div id="test-view" class="container">
+    <P  v-text="name" style="background-color: black; color: #fff;"></P>
+    <form action="" method="POST">
+     
+      <item-text v-for="post in posts" :title="post.title" :text="post.text" :author="post.author" :id="post.id" > </item-text>
+      <p> the input {{name}}</p>
+      <input type="text" v-model="findlang">
+      
+    </form>
+
+    <ul>
+         <li v-for="lang in filterLanguage" >{{lang}}</li>
+
+    </ul>
+
+    <p>{{calAge}}</p>
+  </div>
+    <script src="js/vue.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/mainjs.js"></script>
+    <script>
+      Vue.component("item-text",{
+        data: function(){
+          return {
+            name:"ahmad",
+            count:0
+          }
+        },
+        props:["title","text","author","id"],
+        template : '<div class="card" style="width: 18rem; margin-top=5px;">  <div class="card-body" <h5 class="card-title">{{title}}</h5> <h6 class="card-subtitle mb-2 text-muted">{{author}}</h6><p class="card-text">{{text}}</p><a href="#" class="card-link">Post Number</a><a href="#" class="card-link">{{id}}</a></div></div>'
+        }
+      )
+     var vue=new Vue({
+           el:'#test-view',
+           data: {
+             name:"khalid" ,
+             age :52,
+             url:"https//www.google.com",
+             posts:[
+              {id:1,author:"khalid",title:"novel",text:"lorem alko apokopeg"},
+              {id:2,author:"ahmad",title:"artical",text:"lorem alko apokopeg"},
+              {id:3,author:"hytham",title:"story",text:"lorem alko apokopeg"},
+              {id:4,author:"mahmoud",title:"artical 2",text:"lorem alko apokopeg"},
+              {id:5,author:"mohamad",title:"novel 3",text:"lorem alko apokopeg"},
+              {id:6,author:"lol",title:"novel 5",text:"lorem alko apokopeg"}
+              ],
+             findlang:"",
+             languages: [
+               "HTML",
+               "CSS",
+               "Angular",
+               "vue",
+               "SASS",
+               "Javascript",
+               "java ",
+               "XML",
+               "C",
+               "c++",
+               "c#",
+               "python",
+               "php",
+               "php laravel",
+               "MVC",
+               ".Net",
+               "react",
+               "Flutter",
+               "MySql"
+             ] 
+           },
+           methods:{
+
+           },
+           computed : {
+             calAge :function(){
+               return this.age*12;
+             },
+             filterLanguage: function(){
+              var flitering= new RegExp(this.findlang,"i");
+               return this.languages.filter(function(el){
+                 return el.match(flitering);
+               })
+             }
+           }
+     });
+    </script>
     
    
   </body>
